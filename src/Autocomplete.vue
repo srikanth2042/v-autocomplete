@@ -64,6 +64,7 @@ export default {
       this.onSelectItem(null, 'inputChange')
       utils.callUpdateItems(this.searchText, this.updateItems)
       this.$emit('change', this.searchText)
+      this.$emit('input', this.searchText)
     },
 
     updateItems () {
@@ -162,6 +163,7 @@ export default {
   }
   .v-autocomplete .v-autocomplete-list {
     position: absolute;
+    z-index: 99999 !important;
   }
   .v-autocomplete .v-autocomplete-list .v-autocomplete-list-item {
     cursor: pointer;
